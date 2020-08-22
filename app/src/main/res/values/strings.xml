@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tip calculator</string>
+    <string name="total_bill">Enter the Total Bill</string>
+    <string name="_15">15%</string>
+    <string name="tip_in_percentage">Percentage to Tip :</string>
+    <string name="number_of_people">Party Size :</string>
+    <string name="_1">1</string>
+    <string name="reset">Reset</string>
+    <string name="_2_36">0.0</string>
+    <string name="tip_amount">Tip amount :</string>
+    <string name="total_to_pay">Total bill to pay :</string>
+    <string name="total_per_person">Total bill per person :</string>
+    <string name="_234_67">0.0</string>
+    <string name="_34_98">0.0</string>
+    <string name="cad">$</string>
+    <string name="enter_number_in_decimal">Enter your bill here</string>
+    <string name="sign_3">$</string>
+    <string name="sign_2">$</string>
+    <string name="sign_1">$</string>
+</resources>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reset"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/bill_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/total_bill"
+        android:textColor="#0F0F0F"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/bill_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:autofillHints=""
+        android:background="#BBDEFB"
+        android:fitsSystemWindows="true"
+        android:hint="@string/enter_number_in_decimal"
+        android:inputType="numberDecimal"
+        android:maxLength="15"
+        android:singleLine="false"
+        app:layout_constraintStart_toStartOf="@+id/bill_name"
+        app:layout_constraintTop_toBottomOf="@+id/bill_name" />
+
+    <TextView
+        android:id="@+id/per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/_15"
+        android:textColor="#F70E0D0D"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tip_per"
+        app:layout_constraintTop_toBottomOf="@+id/bill_entry" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:max="25"
+        app:layout_constraintStart_toEndOf="@+id/per"
+        app:layout_constraintTop_toBottomOf="@+id/bill_entry" />
+
+    <TextView
+        android:id="@+id/tip_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/tip_in_percentage"
+        android:textColor="#E6080908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bill_entry" />
+
+    <TextView
+        android:id="@+id/people_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/number_of_people"
+        android:textColor="#E60F0F0F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/_1"
+        android:textColor="#F7090808"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/people_num"
+        app:layout_constraintTop_toBottomOf="@+id/per" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:max="10"
+        android:min="1"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/per" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="50dp"
+        android:background="#D93F51B5"
+        android:text="@string/reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
+
+    <TextView
+        android:id="@+id/tip_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="140dp"
+        android:background="#FFE0B2"
+        android:text="@string/tip_amount"
+        android:textColor="#E60A0A0A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/people_num" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="#FFFFFF"
+        android:text="@string/_2_36"
+        android:textColor="#F70E0D0D"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tip_amount"
+        app:layout_constraintTop_toTopOf="@+id/tip_amount" />
+
+    <TextView
+        android:id="@+id/total_t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#FFE0B2"
+        android:text="@string/total_to_pay"
+        android:textColor="#E60F0F0F"
+        app:layout_constraintEnd_toEndOf="@+id/tip_amount"
+        app:layout_constraintTop_toBottomOf="@+id/tip_amount" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="#FFFFFF"
+        android:text="@string/_234_67"
+        android:textColor="#F7090808"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/total_t"
+        app:layout_constraintTop_toBottomOf="@+id/tip" />
+
+    <TextView
+        android:id="@+id/total_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#FFE0B2"
+        android:text="@string/total_per_person"
+        android:textColor="#E60A0A0A"
+        app:layout_constraintEnd_toEndOf="@+id/total_t"
+        app:layout_constraintTop_toBottomOf="@+id/total_t" />
+
+    <TextView
+        android:id="@+id/per_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/_34_98"
+        android:textColor="#F80A0A0A"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/total_per"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="3dp"
+        android:text="@string/cad"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bill_entry"
+        app:layout_constraintEnd_toStartOf="@+id/bill_entry"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_1"
+        app:layout_constraintBottom_toBottomOf="@+id/tip"
+        app:layout_constraintStart_toEndOf="@+id/tip" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_2"
+        app:layout_constraintBottom_toBottomOf="@+id/total"
+        app:layout_constraintStart_toEndOf="@+id/total" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_3"
+        app:layout_constraintBottom_toBottomOf="@+id/per_person"
+        app:layout_constraintStart_toEndOf="@+id/per_person" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="22dp"
+        android:background="#99070707"
+        app:layout_constraintBottom_toTopOf="@+id/tip_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
